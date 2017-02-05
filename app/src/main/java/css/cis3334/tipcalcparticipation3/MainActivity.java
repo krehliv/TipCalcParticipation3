@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickButtonCalculate(View view) {
+        // Test Comment
         Double bill = Double.parseDouble(etBill.getText().toString());
         Double numPeople = Double.parseDouble(etNumPeople.getText().toString());
         Double totalTip;
