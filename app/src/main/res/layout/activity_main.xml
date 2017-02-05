@@ -16,15 +16,6 @@
         android:text="Bill Amount"
         android:id="@+id/textView" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="numberDecimal"
-        android:ems="10"
-        android:layout_below="@+id/textView"
-        android:layout_alignParentStart="true"
-        android:id="@+id/editTextBill" />
-
     <TextView
         android:text="TextView"
         android:layout_width="wrap_content"
@@ -34,48 +25,79 @@
         android:layout_marginTop="17dp"
         android:id="@+id/textView2" />
 
-    <EditText
+    <RadioGroup
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="10"
         android:layout_below="@+id/textView2"
         android:layout_alignParentStart="true"
-        android:id="@+id/editTextNumPeople" />
+        android:layout_marginTop="13dp" >
 
-    <CheckBox
-        android:text="Outstanding Service"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/editTextNumPeople"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="33dp"
-        android:id="@+id/checkBoxService" />
+        <RadioButton
+            android:text="1: One"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButton1"
+            android:layout_weight="1" />
 
-    <Button
-        android:text="Calculate Tip"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_alignParentStart="true"
-        android:id="@+id/buttonCalculate"
-        android:onClick="onClickButtonCalculate" />
+        <RadioButton
+            android:text="2: Two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButton2"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:text="3: Three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButto3"
+            android:layout_weight="1" />
+    </RadioGroup>
 
     <TextView
         android:text="Total Tip: "
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:id="@+id/textViewTotalTip"
         android:layout_below="@+id/buttonCalculate"
+        android:layout_alignEnd="@+id/textView" />
+
+    <CheckBox
+        android:text="Outstanding Service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkBoxService"
+        android:layout_below="@+id/textViewTipPerPerson"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="20dp"
-        android:id="@+id/textViewTotalTip" />
+        android:layout_marginTop="17dp" />
 
     <TextView
         android:text="Tip Per Person: "
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/textViewTipPerPerson"
+        android:layout_marginTop="20dp"
         android:layout_below="@+id/textViewTotalTip"
+        android:layout_alignStart="@+id/textViewTotalTip" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/editTextBill"
+        android:layout_below="@+id/textView"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="24dp"
-        android:id="@+id/textViewTipPerPerson" />
+        android:layout_marginTop="11dp" />
+
+    <Button
+        android:text="Calculate Tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonCalculate"
+        android:onClick="onClickButtonCalculate"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
 </RelativeLayout>
